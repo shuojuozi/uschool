@@ -1,4 +1,17 @@
 <script setup>
+import {useRouter} from 'vue-router'
+import {gotoMe} from '@/utils/nav.js'
+import { gotoMain } from '@/utils/nav.js';
+
+const router = useRouter();
+
+function me() {
+    gotoMe(router);
+}
+
+function main() {
+    gotoMain(router);
+}
 
 </script>
 
@@ -76,7 +89,7 @@
         </div>
     </div>
     <div class="nav">
-        <button id="main">
+        <button id="main" @click="main">
             <img src="https://bpic.588ku.com/element_origin_min_pic/01/39/45/50573cbf9298051.jpg"> 主页
         </button>
         <button id="resources">
@@ -88,7 +101,7 @@
         <button id="assess">
             <img src="https://bpic.51yuansu.com/pic2/cover/00/39/25/5812dcb92cb49_610.jpg"> 评估区
         </button>
-        <button id="me">
+        <button id="me" @click="me">
             <img src="https://img.tukuppt.com/png_preview/00/42/54/wBSygyMDwc.jpg%21/fw/780"> 个人中心
         </button>
     </div>

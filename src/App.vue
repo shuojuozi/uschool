@@ -3,7 +3,8 @@ import UschoolMainVue from '@/views/UschoolMain.vue'
 </script>
 
 <template>
-    <UschoolMainVue />
+  <router-view :key="$route.fullPath" />
+  
 </template>
 
 <style scoped></style>
