@@ -9,3 +9,7 @@ export const gotoMe = (router) => {
 export const gotoResources = (router) => {
     router.push('/resources');
 }
+
+export const gotoRForum = (router) => {
+    router.push('/forum');
+}

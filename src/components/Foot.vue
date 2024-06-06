@@ -3,6 +3,7 @@ import {useRouter} from 'vue-router'
 import {gotoMe} from '@/utils/nav.js'
 import { gotoMain } from '@/utils/nav.js';
 import { gotoResources } from '@/utils/nav.js';
+import { gotoRForum } from '@/utils/nav.js';
 
 const router = useRouter();
 
@@ -17,6 +18,10 @@ function main() {
 function resources() {
     gotoResources(router);
 }
+
+function forum() {
+    gotoRForum(router);
+}
 </script>
 
 <template>
@@ -27,7 +32,7 @@ function resources() {
         <button id="resources" @click="resources">
             <img src="https://bpic.51yuansu.com/pic3/cover/01/93/21/5982fd2b7b230_610.jpg"> 资源区
         </button>
-        <button id="forum">
+        <button id="forum" @click="forum">
             <img src="https://img1.baidu.com/it/u=1802270573,2949166487&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"> 论坛区
         </button>
         <button id="assess">
