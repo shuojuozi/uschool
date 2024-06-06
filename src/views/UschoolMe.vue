@@ -1,5 +1,10 @@
 <script setup>
 import Foot from '@/components/Foot.vue'
+import router from '@/router';
+import { gotoWrongs } from '@/utils/nav.js';
+function wrongs(){
+    gotoWrongs(router);
+}
 </script>
 
 <template>
@@ -17,7 +22,7 @@ import Foot from '@/components/Foot.vue'
         <button id="collections">
             <img src="https://bpic.51yuansu.com/pic3/cover/03/84/54/5c0f1a4097622_610.jpg"> 收藏夹
         </button>
-        <button id="wrongs">
+        <button id="wrongs" @click="wrongs">
             <img src="https://img0.baidu.com/it/u=959575447,1105429392&fm=253&fmt=auto&app=138&f=JPEG?w=247&h=247"> 错题集
         </button>
         <button id="history">
