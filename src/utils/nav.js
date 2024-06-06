@@ -5,3 +5,7 @@ export const gotoMain = (router) => {
 export const gotoMe = (router) => {
     router.push('/me');
 }
+
+export const gotoResources = (router) => {
+    router.push('/resources');
+}
